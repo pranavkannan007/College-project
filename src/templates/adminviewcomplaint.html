@@ -1,0 +1,28 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <p>
+    <label></label>
+    <label></label>
+  </p>
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>user name </th>
+      <th>complaints</th>
+      <th>date</th>
+      <th>&nbsp;</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[0]}}</td>
+      <td>{{i[1]}}</td>
+      <td>{{i[2]}}</td>
+      <td><a href="{{url_for('adminreplay1',id=i[3])}}">replay</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

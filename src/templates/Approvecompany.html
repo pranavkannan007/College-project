@@ -1,0 +1,33 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>Company name </th>
+      <th>PIN</th>
+      <th>Post</th>
+      <th>Place</th>
+      <th>Website</th>
+      <th>Contact number </th>
+      <th>E-mail</th>
+      <th>&nbsp;</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[2]}}</td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td>{{i[8]}}</td>
+      <td><p><a href="{{url_for('approve',id=i[1])}}">Approve</a></p>
+        <p><a href="{{url_for('reject',id=i[1])}}">Reject</a></p></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

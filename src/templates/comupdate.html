@@ -1,0 +1,59 @@
+{%extends 'companyindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/fetchupdate">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>Company name </th>
+      <td><label>
+        <input type="text" name="textfield" value="{{val[2]}}" required pattern="[A-Z a-z]{3,26}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>pin</th>
+      <td><label>
+        <input type="text" name="textfield2" value="{{val[3]}}" required pattern="[0-9]{6}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>Place</th>
+      <td><label>
+        <input type="text" name="textfield3" value="{{val[4]}}" required pattern="[A-Z a-z]{3,26}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>Post</th>
+      <td><label>
+        <input type="text" name="textfield4" value="{{val[5]}}" required pattern="[A-Z a-z]{3,26}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>Website</th>
+      <td><label>
+        <input type="text" name="textfield9" value="{{val[6]}}" required />
+      </label></td>
+    </tr>
+    <tr>
+      <th>E-mail</th>
+      <td><label>
+        <input type="text" name="textfield5" value="{{val[7]}}" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>contact number </th>
+      <td><label>
+        <input type="text" name="textfield8" value="{{val[8]}}" required pattern="[9876][0-9]{9}" />
+      </label></td>
+    </tr>
+    <tr>
+      <td height="23" colspan="2"><label>
+
+        <div align="right">
+          <input type="submit" name="Submit" value="update" />
+        </div>
+          </label></td></tr>
+  </table>
+</form>
+</body>
+{% endblock %}

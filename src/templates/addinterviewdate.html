@@ -1,0 +1,33 @@
+{%extends 'companyindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addinterviewdate1">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>post</th>
+      <td><label>
+      <select name="select">
+        {% for i in val %}
+        <option value="{{i[0]}}">{{i[1]}}</option>
+        {% endfor %}
+      </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th>interview date </th>
+      <td><label>
+      <input type="date" name="textfield2" required />
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Submit" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

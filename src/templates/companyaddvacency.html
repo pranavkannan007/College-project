@@ -1,0 +1,35 @@
+{%extends 'companyindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addvacency">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>Description</th>
+      <td><label>
+        <textarea name="textarea"></textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <th>post</th>
+      <td><label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z]{3,26}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>vacency</th>
+      <td><label>
+        <input type="text" name="textfield2" required pattern="[0-9]{1,10}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Submit" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

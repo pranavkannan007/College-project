@@ -1,0 +1,23 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/sendreply">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>Replay</th>
+      <td><label>
+        <textarea name="textarea" required></textarea>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="Send" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

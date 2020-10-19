@@ -1,0 +1,22 @@
+{%extends 'adminindex.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>candidate name</th>
+      <th>E-mail  </th>
+      <th>Resume</th>
+    </tr>
+    {% for i in val %}
+    <tr>
+      <td>{{i[2]}}</td>
+      <td>{{i[4]}}</td>
+      <td><a href="./static/resume/{{i[6]}}">{{i[6]}}</a> </td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

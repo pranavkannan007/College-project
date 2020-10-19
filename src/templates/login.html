@@ -1,0 +1,34 @@
+
+
+{%extends 'index.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/log">
+  <table width="200" border="0" align="center" id="customers">
+    <tr>
+      <th>username</th>
+      <td><label>
+        <input type="text" name="textfield" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>password</th>
+      <td><label>
+        <input type="password" name="textfield2" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit2" value="login" />
+          <label><a href="companyreg">sign up</a></label>
+        </div>
+      </label></td>
+    </tr>
+  </table>
+  <label></label>
+</form>
+</body>
+{% endblock %}
+

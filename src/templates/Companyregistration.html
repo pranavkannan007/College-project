@@ -1,0 +1,71 @@
+{%extends 'index.html'%}
+{%block body%}
+
+<body>
+<form id="form1" name="form1" method="post" action="/fetch">
+  <table width="200" border="0" align="center" id="customers">
+    <tr>
+      <th>Company name </th>
+      <td><label>
+        <input type="text" name="textfield" required pattern="[A-Z a-z]{3,26}"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>pin</th>
+      <td><label>
+        <input type="text" name="textfield2" required pattern="[0-9]{6}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>Place</th>
+      <td><label>
+        <input type="text" name="textfield3" required pattern="[A-Z a-z]{3,26}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>Post</th>
+      <td><label>
+        <input type="text" name="textfield4" required pattern="[A-Z a-z]{3,26}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>Website</th>
+      <td><label>
+        <input type="text" name="textfield9" required />
+      </label></td>
+    </tr>
+    <tr>
+      <th>E-mail</th>
+      <td><label>
+        <input type="text" name="textfield5" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>contact number </th>
+      <td><label>
+        <input type="text" name="textfield8" required pattern="[9876][0-9]{9}" />
+      </label></td>
+    </tr>
+    <tr>
+      <th>password</th>
+      <td><label>
+        <input type="password" name="textfield6" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <th>Confirm password</th>
+      <td><label>
+        <input type="password" name="textfield7" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <td height="23" colspan="2"><label>
+        <div align="center">
+          <input type="submit" name="Submit" value="register" />
+          </div>
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
